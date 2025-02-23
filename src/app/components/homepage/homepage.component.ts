@@ -23,15 +23,22 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   availableStores: Store[] = [];
 
   slides = [
-    { image: 'https://swiperjs.com/demos/images/nature-1.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-2.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-3.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-4.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-5.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-6.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-7.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-8.jpg' },
-    { image: 'https://swiperjs.com/demos/images/nature-10.jpg' },
+    { image: 'assets/slider/0.jpg' },
+    { image: 'assets/slider/1.jpg' },
+    { image: 'assets/slider/2.jpg' },
+    { image: 'assets/slider/3.jpg' },
+    { image: 'assets/slider/4.jpg' },
+    { image: 'assets/slider/5.jpg' },
+    { image: 'assets/slider/6.jpg' },
+    { image: 'assets/slider/7.jpg' },
+    { image: 'assets/slider/8.jpg' },
+    { image: 'assets/slider/9.jpg' },
+    { image: 'assets/slider/10.jpg' },
+    { image: 'assets/slider/11.jpg' },
+    { image: 'assets/slider/12.jpg' },
+    { image: 'assets/slider/13.jpg' },
+    { image: 'assets/slider/14.jpg' },
+    { image: 'assets/slider/15.jpg' },
   ];
 
   ngOnInit(): void {
@@ -40,8 +47,8 @@ export class HomepageComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.swiperComponent) {
-      this.swiperComponent.activeIndex = 2;
-      this.swiperComponent.autoplay.start();
+      // this.swiperComponent.activeIndex = 2;
+      // this.swiperComponent.autoplay.start();
     }
   }
 }
