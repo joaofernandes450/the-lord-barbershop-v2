@@ -3,15 +3,36 @@
   flex-direction: column;
 }
 
-.the-lord-logo {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-image: url(../../../../public/assets/backgrounds/thelord.png);
-  background-position: center;
-  -webkit-backgroud-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
+.logo-section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+
+    img {
+      width: 20%;
+    }
+  }
+
+  // .the-lord-logo {
+  //   position: absolute;
+  //   width: 40%;
+  //   height: 100%;
+  //   background-image: url(../../../../public/assets/backgrounds/thelord.png);
+  //   background-position: center;
+  //   -webkit-backgroud-size: cover;
+  //   background-size: cover;
+  //   -o-background-size: cover;
+  //   z-index: 9999;
+  // }
 }
 
 .stores-section,
@@ -56,4 +77,23 @@
     -moz-transition: 0.3s ease;
     transition: 0.3s ease;
   }
+}
+
+//Swipper
+swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 50vh;
+  height: 50vh;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
 }
