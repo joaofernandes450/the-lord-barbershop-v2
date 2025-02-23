@@ -1,0 +1,59 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.the-lord-logo {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(../../../../public/assets/backgrounds/thelord.png);
+  background-position: center;
+  -webkit-backgroud-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.stores-section,
+.services-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  h1 {
+    color: gold;
+
+    &:after {
+      content: "";
+      background: white;
+      display: block;
+      height: 3px;
+      width: 150px;
+      margin: 10px auto;
+    }
+  }
+}
+
+.the-lord-stores {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+
+  .store-image {
+    transform: translateY(0px);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+
+  .store-image:hover {
+    transform: translateY(-20px);
+    cursor: pointer;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+}

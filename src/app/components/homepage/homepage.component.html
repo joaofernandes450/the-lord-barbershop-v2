@@ -1,0 +1,19 @@
+<div class="homepage-container">
+  <div class="logo-section">
+    <div class="the-lord-logo"></div>
+  </div>
+
+  <div class="stores-section">
+    <h1>AS NOSSAS BARBEARIAS</h1>
+    <div class="the-lord-stores">
+      @for (store of availableStores; track $index) {
+      <img class="store-image" [src]="store.image" />
+      }
+    </div>
+  </div>
+
+  <div class="services-section">
+    <h1>OS NOSSOS SERVIÇOS</h1>
+    <div class="the-lord-services"></div>
+  </div>
+</div>
