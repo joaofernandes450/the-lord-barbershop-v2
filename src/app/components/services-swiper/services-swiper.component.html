@@ -1,0 +1,15 @@
+<swiper-container
+  #servicesSwiperContainer
+  class="mySwiper"
+  effect="cards"
+  grab-cursor="true"
+>
+  @for (service of services; track $index) {
+  <swiper-slide>
+    <div class="service-info">
+      <span>{{ service.name }}</span>
+      <span>{{ service.price }} €</span>
+    </div>
+  </swiper-slide>
+  }
+</swiper-container>

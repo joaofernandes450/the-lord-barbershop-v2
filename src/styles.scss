@@ -18,3 +18,7 @@ body {
 * {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+
+.book-iframe-dialog {
+  z-index: 99999 !important;
+}

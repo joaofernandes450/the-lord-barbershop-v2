@@ -1,23 +1,35 @@
+import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
+  inject,
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { Store, STORES } from '../../models/store';
-import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialog } from '@angular/material/dialog';
 import SwiperComponent from 'swiper/core';
+import { Store, STORES } from '../../models/store';
+import {
+  beardServices,
+  beautyServices,
+  StoreService,
+} from '../../models/store-service';
+import { ReservationDialogComponent } from '../reservation-dialog/reservation-dialog.component';
+import { ServicesSwiperComponent } from '../services-swiper/services-swiper.component';
 
 @Component({
   selector: 'app-homepage',
-  imports: [CommonModule],
+  imports: [CommonModule, ServicesSwiperComponent, MatButtonModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class HomepageComponent implements OnInit, AfterViewInit {
+  private dialog = inject(MatDialog);
+
   @ViewChild('swiperComponent') swiperComponent?: SwiperComponent;
 
   availableStores: Store[] = [];
@@ -41,6 +53,9 @@ export class HomepageComponent implements OnInit, AfterViewInit {
     { image: 'assets/slider/15.jpg' },
   ];
 
+  beardServices: StoreService[] = beardServices;
+  beautyServices: StoreService[] = beautyServices;
+
   ngOnInit(): void {
     this.availableStores = STORES;
   }
@@ -50,5 +65,17 @@ export class HomepageComponent implements OnInit, AfterViewInit {
       // this.swiperComponent.activeIndex = 2;
       // this.swiperComponent.autoplay.start();
     }
+  }
+
+  openReservations(): void {
+    const dialogRef = this.dialog.open(ReservationDialogComponent, {
+      panelClass: 'book-iframe-dialog',
+    });
+
+    dialogRef.afterClosed().subscribe(() => {});
+  }
+
+  teste() {
+    window.alert('1');
   }
 }

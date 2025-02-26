@@ -1,5 +1,14 @@
 <div class="homepage-container">
   <div class="logo-section">
+    <div class="reservation-button-container">
+      <button
+        mat-flat-button
+        class="reservations-button"
+        (click)="openReservations()"
+      >
+        Marca Connosco
+      </button>
+    </div>
     <swiper-container
       #swiperComponent
       class="mySwiper"
@@ -39,6 +48,9 @@
 
   <div class="services-section">
     <h1>OS NOSSOS SERVIÇOS</h1>
-    <div class="the-lord-services"></div>
+    <div class="the-lord-services">
+      <app-services-swiper [services]="beardServices"></app-services-swiper>
+      <app-services-swiper [services]="beautyServices"></app-services-swiper>
+    </div>
   </div>
 </div>
