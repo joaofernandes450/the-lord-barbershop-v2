@@ -26,14 +26,13 @@
             mat-icon-button
             (click)="drawer.toggle()"
           >
-            <mat-icon aria-label="Side nav toggle icon">{{
-              sidenavOpen ? "close" : "menu"
-            }}</mat-icon>
+            <mat-icon>{{ sidenavOpen ? "close" : "menu" }}</mat-icon>
           </button>
-          }
+          } @else {
           <div class="header-content">
             <app-reusable-header></app-reusable-header>
           </div>
+          }
         </div>
       </mat-toolbar>
       <div class="content-container">

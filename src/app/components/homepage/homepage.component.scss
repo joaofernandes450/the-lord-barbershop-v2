@@ -17,10 +17,6 @@
     position: absolute;
     z-index: 999;
     pointer-events: none;
-
-    img {
-      width: 20%;
-    }
   }
 
   swiper-container {
@@ -62,6 +58,9 @@
   gap: 20px;
 
   h1 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
     color: gold;
 
     &:after {
@@ -76,16 +75,13 @@
 }
 
 .the-lord-stores {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-
   .store-image {
     transform: translateY(0px);
     transition: 0.3s ease;
     -webkit-transition: 0.3s ease;
     -moz-transition: 0.3s ease;
     transition: 0.3s ease;
+    width: 100%;
   }
 
   .store-image:hover {
@@ -98,8 +94,87 @@
   }
 }
 
-.the-lord-services {
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .logo-container {
+    img {
+      width: 100%;
+    }
+  }
+
+  .the-lord-stores {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .the-lord-services {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .logo-container {
+    img {
+      width: 100%;
+    }
+  }
+
+  .the-lord-stores {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .the-lord-services {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .logo-container {
+    img {
+      width: 75%;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .logo-container {
+    img {
+      width: 50%;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .logo-container {
+    img {
+      width: 25%;
+    }
+  }
+
+  .the-lord-services {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .the-lord-services {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
 }
