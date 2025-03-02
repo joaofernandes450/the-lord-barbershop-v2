@@ -16,4 +16,78 @@
       height: 100%;
     }
   }
+
+  .mobile-header-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    img {
+      width: 25%;
+    }
+
+    .mobile-toolbar-button {
+      color: goldenrod;
+    }
+  }
+}
+
+//Mobile Sidenav
+.sidenav {
+  width: 100%;
+  transform: translate3d(0, -100%, 0);
+  background-color: #433a39;
+  color: goldenrod;
+
+  .mat-toolbar {
+    background: inherit;
+  }
+
+  .mobile-toolbar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    .close-button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 16px;
+
+      button {
+        color: goldenrod;
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .list-text {
+        color: goldenrod;
+      }
+
+      .social-media {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          display: flex;
+          width: 15%;
+          justify-content: center;
+
+          img {
+            display: block;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
 }

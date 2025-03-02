@@ -8,11 +8,34 @@
       [mode]="(isHandset$ | async) ? 'over' : 'over'"
     >
       <mat-toolbar>
-        <mat-nav-list>
-          <a class="list-item" mat-list-item
-            ><span class="list-text">Marcações</span></a
-          >
-        </mat-nav-list>
+        <div class="mobile-toolbar-content">
+          <div class="close-button">
+            <button type="button" mat-icon-button (click)="drawer.toggle()">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+          <div class="content">
+            <mat-nav-list>
+              <a
+                class="list-item"
+                mat-list-item
+                (click)="drawer.toggle(); openReservations()"
+                ><span class="list-text">Marcações</span></a
+              >
+            </mat-nav-list>
+            <div class="social-media">
+              <a href="https://www.instagram.com/thelord.pt/">
+                <img src="assets/socials/insta.png" />
+              </a>
+              <a href="https://www.facebook.com/pt.thelord/">
+                <img src="assets/socials/fb.png" />
+              </a>
+              <a href="https://www.tiktok.com/@thelord.pt/">
+                <img src="assets/socials/tiktok.png" />
+              </a>
+            </div>
+          </div>
+        </div>
       </mat-toolbar>
     </mat-sidenav>
 
@@ -20,14 +43,19 @@
       <mat-toolbar class="navigation-toolbar" color="primary">
         <div class="navigation-actions">
           @if (isHandset$ | async) {
-          <button
-            type="button"
-            aria-label="Toggle sidenav"
-            mat-icon-button
-            (click)="drawer.toggle()"
-          >
-            <mat-icon>{{ sidenavOpen ? "close" : "menu" }}</mat-icon>
-          </button>
+          <div class="mobile-header-content">
+            <a href="">
+              <img src="assets/logos/the_lord_logo_golden.png" />
+            </a>
+            <button
+              type="button"
+              mat-icon-button
+              (click)="drawer.toggle()"
+              class="mobile-toolbar-button"
+            >
+              <mat-icon>{{ sidenavOpen ? "close" : "menu" }}</mat-icon>
+            </button>
+          </div>
           } @else {
           <div class="header-content">
             <app-reusable-header></app-reusable-header>

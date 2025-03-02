@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
 import { map, Observable, shareReplay } from 'rxjs';
+import { ReservationService } from '../../services/reservation.service';
 import { ReusableHeaderComponent } from '../reusable-header/reusable-header.component';
 
 @Component({
@@ -28,6 +29,7 @@ import { ReusableHeaderComponent } from '../reusable-header/reusable-header.comp
 })
 export class NavigationComponent {
   private breakpointObserver = inject(BreakpointObserver);
+  private reservationService = inject(ReservationService);
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -49,5 +51,9 @@ export class NavigationComponent {
     //   element.classList.remove('scrolled');
     //   this.showLogo = false;
     // }
+  }
+
+  openReservations(): void {
+    this.reservationService.openReservations();
   }
 }
