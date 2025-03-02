@@ -1,0 +1,44 @@
+<div class="navigation-container">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #drawer
+      class="sidenav"
+      fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'over'"
+    >
+      <mat-toolbar>
+        <mat-nav-list>
+          <a class="list-item" mat-list-item
+            ><span class="list-text">Marcações</span></a
+          >
+        </mat-nav-list>
+      </mat-toolbar>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar class="navigation-toolbar" color="primary">
+        <div class="navigation-actions">
+          @if (isHandset$ | async) {
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()"
+          >
+            <mat-icon aria-label="Side nav toggle icon">{{
+              sidenavOpen ? "close" : "menu"
+            }}</mat-icon>
+          </button>
+          }
+          <div class="header-content">
+            <app-reusable-header></app-reusable-header>
+          </div>
+        </div>
+      </mat-toolbar>
+      <div class="content-container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
