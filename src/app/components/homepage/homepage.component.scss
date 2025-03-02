@@ -6,7 +6,7 @@
 
 .logo-section {
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 64px);
   align-items: center;
 
   .logo-container {
@@ -22,18 +22,6 @@
       width: 20%;
     }
   }
-
-  // .the-lord-logo {
-  //   position: absolute;
-  //   width: 40%;
-  //   height: 100%;
-  //   background-image: url(../../../../public/assets/backgrounds/thelord.png);
-  //   background-position: center;
-  //   -webkit-backgroud-size: cover;
-  //   background-size: cover;
-  //   -o-background-size: cover;
-  //   z-index: 9999;
-  // }
 
   swiper-container {
     width: 100%;
@@ -55,13 +43,9 @@
   }
 
   .reservation-button-container {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    width: 100%;
-    height: 100%;
     position: absolute;
-    margin-bottom: 10%;
+    bottom: 0;
+    left: 50%;
 
     .reservations-button {
       color: darkgreen;

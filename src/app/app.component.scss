@@ -1,6 +1,14 @@
-
 .webpage-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  background-color: #e6e1d8 !important;
+  background-image: url(../../public/assets/backgrounds/background.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  --mat-sys-background: none !important;
+  --mat-sys-surface: none !important;
 }
