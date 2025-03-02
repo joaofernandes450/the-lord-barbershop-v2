@@ -74,8 +74,4 @@ export class HomepageComponent implements OnInit, AfterViewInit {
 
     dialogRef.afterClosed().subscribe(() => {});
   }
-
-  teste() {
-    window.alert('1');
-  }
 }

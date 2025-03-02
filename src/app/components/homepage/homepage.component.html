@@ -34,14 +34,15 @@
     <div class="logo-container">
       <img src="assets/backgrounds/thelord.png" />
     </div>
-    <!-- <div class="the-lord-logo-container"></div> -->
   </div>
 
   <div class="stores-section">
     <h1>AS NOSSAS BARBEARIAS</h1>
     <div class="the-lord-stores">
       @for (store of availableStores; track $index) {
-      <img class="store-image" [src]="store.image" />
+      <a [href]="store.mapsLink">
+        <img class="store-image" [src]="store.image" />
+      </a>
       }
     </div>
   </div>
