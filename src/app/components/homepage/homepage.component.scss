@@ -75,22 +75,32 @@
 }
 
 .the-lord-stores {
-  .store-image {
-    transform: translateY(0px);
-    transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    transition: 0.3s ease;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
 
-  .store-image:hover {
-    transform: translateY(-20px);
-    cursor: pointer;
-    transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    transition: 0.3s ease;
+  a {
+    width: 100%;
+
+    .store-image {
+      transform: translateY(0px);
+      transition: 0.3s ease;
+      -webkit-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+      transition: 0.3s ease;
+      width: 100%;
+    }
+
+    .store-image:hover {
+      transform: translateY(-20px);
+      cursor: pointer;
+      transition: 0.3s ease;
+      -webkit-transition: 0.3s ease;
+      -moz-transition: 0.3s ease;
+      transition: 0.3s ease;
+    }
   }
 }
 
@@ -100,13 +110,6 @@
     img {
       width: 100%;
     }
-  }
-
-  .the-lord-stores {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
   }
 
   .the-lord-services {
@@ -125,13 +128,6 @@
     }
   }
 
-  .the-lord-stores {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
   .the-lord-services {
     display: flex;
     flex-direction: column;
@@ -142,19 +138,19 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .logo-container {
-    img {
-      width: 75%;
-    }
-  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .logo-container {
     img {
-      width: 50%;
+      width: 75%;
     }
+  }
+
+  .the-lord-stores {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
 
@@ -162,18 +158,13 @@
 @media only screen and (min-width: 1200px) {
   .logo-container {
     img {
-      width: 25%;
+      width: 75%;
     }
   }
 
   .the-lord-services {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-
-  .the-lord-services {
-    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
   }

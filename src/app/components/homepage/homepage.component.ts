@@ -35,22 +35,22 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   availableStores: Store[] = [];
 
   slides = [
-    { image: 'assets/slider/0.jpg' },
-    { image: 'assets/slider/1.jpg' },
-    { image: 'assets/slider/2.jpg' },
-    { image: 'assets/slider/3.jpg' },
-    { image: 'assets/slider/4.jpg' },
-    { image: 'assets/slider/5.jpg' },
-    { image: 'assets/slider/6.jpg' },
-    { image: 'assets/slider/7.jpg' },
-    { image: 'assets/slider/8.jpg' },
-    { image: 'assets/slider/9.jpg' },
-    { image: 'assets/slider/10.jpg' },
-    { image: 'assets/slider/11.jpg' },
-    { image: 'assets/slider/12.jpg' },
-    { image: 'assets/slider/13.jpg' },
-    { image: 'assets/slider/14.jpg' },
-    { image: 'assets/slider/15.jpg' },
+    { image: 'assets/slider/1.png' },
+    { image: 'assets/slider/2.png' },
+    { image: 'assets/slider/3.png' },
+    { image: 'assets/slider/4.png' },
+    { image: 'assets/slider/5.png' },
+    { image: 'assets/slider/6.png' },
+    { image: 'assets/slider/7.png' },
+    { image: 'assets/slider/8.png' },
+    { image: 'assets/slider/9.png' },
+    { image: 'assets/slider/10.png' },
+    { image: 'assets/slider/11.png' },
+    { image: 'assets/slider/12.png' },
+    { image: 'assets/slider/13.png' },
+    { image: 'assets/slider/14.png' },
+    { image: 'assets/slider/15.png' },
+    { image: 'assets/slider/16.png' },
   ];
 
   beardServices: StoreService[] = beardServices;

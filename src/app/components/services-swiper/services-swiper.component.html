@@ -6,10 +6,11 @@
 >
   @for (service of services; track $index) {
   <swiper-slide>
-    <div class="service-info">
+    <!-- <div class="service-info">
       <span>{{ service.name }}</span>
       <span>{{ service.price }} €</span>
-    </div>
+    </div> -->
+    <img [src]="service.image" />
   </swiper-slide>
   }
 </swiper-container>
