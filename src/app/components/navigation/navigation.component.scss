@@ -70,6 +70,16 @@
         color: goldenrod;
       }
 
+      .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        img {
+          width: 50%;
+        }
+      }
+
       .social-media {
         display: flex;
         gap: 10px;

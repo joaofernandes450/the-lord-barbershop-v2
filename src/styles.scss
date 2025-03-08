@@ -27,9 +27,16 @@ body {
 
 .book-iframe-dialog {
   z-index: 99999 !important;
+
+  @include mat.dialog-overrides(
+    (
+      container-color: rgb(45, 45, 45),
+      subhead-color: gold
+    )
+  );
 }
 
 .the-lord-button {
-  color: white !important;
-  background-image: url(../public/assets/backgrounds/button_background.png) !important;
+  color: gold !important;
+  // background-image: url(../public/assets/backgrounds/button_background.png) !important;
 }

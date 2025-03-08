@@ -37,6 +37,6 @@ export const STORES: Store[] = [
     phoneNumber: '+351 914 210 310',
     image: 'assets/stores/theLordSantoTirso.png',
     route: 'the-lord-prive',
-    mapsLink: 'https://maps.app.goo.gl/LRxwt8M6Cw6fTtBR7',
+    mapsLink: 'https://maps.app.goo.gl/n2wxAzmXitDDXTD39',
   },
 ];
