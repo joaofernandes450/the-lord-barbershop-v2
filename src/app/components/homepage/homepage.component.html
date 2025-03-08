@@ -36,7 +36,7 @@
   </div>
 
   <div class="stores-section">
-    <h1>AS NOSSAS BARBEARIAS</h1>
+    <!-- <h1>AS NOSSAS BARBEARIAS</h1> -->
     <div class="the-lord-stores">
       @for (store of availableStores; track $index) {
       <a [href]="store.mapsLink">
@@ -47,7 +47,10 @@
   </div>
 
   <div class="services-section">
-    <h1>OS NOSSOS SERVIÇOS</h1>
+    <!-- <h1>OS NOSSOS SERVIÇOS</h1> -->
+    <div class="title">
+      <img src="assets/titles/services_title.png" />
+    </div>
     <div class="the-lord-services">
       <app-services-swiper [services]="beardServices"></app-services-swiper>
       <app-services-swiper [services]="beautyServices"></app-services-swiper>
