@@ -1,25 +1,15 @@
 <div class="homepage-container">
   <div class="logo-section">
-    <!-- <div class="reservation-button-container">
-      <button
-        mat-flat-button
-        class="reservations-button"
-        (click)="openReservations()"
-      >
-        Marca Connosco
-      </button>
-    </div> -->
     <swiper-container
       #swiperComponent
       class="mySwiper"
-      grab-cursor="true"
       centered-slides="true"
       slides-per-view="auto"
       loop="true"
       autoplay-delay="2000"
       autoplay-disable-on-interaction="false"
       effect="coverflow"
-      coverflow-effect-rotate="30"
+      coverflow-effect-rotate="15"
       coverflow-effect-stretch="-50"
       coverflow-effect-depth="100"
       coverflow-effect-modifier="1"
@@ -33,6 +23,15 @@
     </swiper-container>
     <div class="logo-container">
       <img src="assets/backgrounds/thelord.png" />
+    </div>
+    <div class="reservation-button-container">
+      <div class="child-container">
+        <img
+          class="reservations-button"
+          src="assets/buttons/marcacoes.png"
+          (click)="openReservations()"
+        />
+      </div>
     </div>
   </div>
 

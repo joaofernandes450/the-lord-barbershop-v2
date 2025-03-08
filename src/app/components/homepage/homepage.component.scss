@@ -8,6 +8,7 @@
   display: flex;
   height: calc(100vh - 64px);
   align-items: center;
+  position: relative;
 
   .logo-container {
     display: flex;
@@ -39,13 +40,35 @@
   }
 
   .reservation-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    z-index: 999;
+    height: 90%;
 
-    .reservations-button {
-      color: darkgreen;
-      background-image: url(../../../../public/assets/backgrounds/button_background.png);
+    .child-container {
+      display: flex;
+      height: 15%;
+
+      .reservations-button {
+        transform: translateY(0px);
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        transition: 0.3s ease;
+        width: 100%;
+      }
+
+      .reservations-button:hover {
+        transform: translateY(-20px);
+        cursor: pointer;
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        transition: 0.3s ease;
+      }
     }
   }
 }
