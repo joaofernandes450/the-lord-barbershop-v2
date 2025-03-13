@@ -6,6 +6,7 @@
 
 .dialog-content {
   height: 75vh;
+  overflow: hidden;
 
   .booking-frame {
     width: 500px;
@@ -15,6 +16,6 @@
 
 @media (max-width: 1024px) {
   .booking-frame {
-    width: auto !important;
+    width: 100% !important;
   }
 }
