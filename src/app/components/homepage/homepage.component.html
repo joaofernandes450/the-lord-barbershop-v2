@@ -1,7 +1,8 @@
 <div class="homepage-container">
   <div class="logo-section">
+    @if (slides && slides.length > 0) {
     <swiper-container
-      #swiperComponent
+      #swiperContainer
       class="mySwiper"
       centered-slides="true"
       slides-per-view="auto"
@@ -14,6 +15,7 @@
       coverflow-effect-depth="100"
       coverflow-effect-modifier="1"
       coverflow-effect-slide-shadows="true"
+      init="false"
     >
       @for (slide of slides; track $index) {
       <swiper-slide>
@@ -21,6 +23,7 @@
       </swiper-slide>
       }
     </swiper-container>
+    }
     <div class="logo-container">
       <img src="assets/backgrounds/thelord.png" />
     </div>

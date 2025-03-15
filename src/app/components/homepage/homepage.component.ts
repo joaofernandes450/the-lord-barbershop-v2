@@ -1,15 +1,15 @@
 import { CommonModule } from '@angular/common';
 import {
-  AfterViewInit,
+  afterNextRender,
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
+  ElementRef,
   inject,
   OnInit,
   ViewChild,
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import SwiperComponent from 'swiper/core';
 import { Store, STORES } from '../../models/store';
 import {
   beardServices,
@@ -27,10 +27,11 @@ import { ServicesSwiperComponent } from '../services-swiper/services-swiper.comp
   standalone: true,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class HomepageComponent implements OnInit, AfterViewInit {
+export class HomepageComponent implements OnInit {
   private dialog = inject(MatDialog);
 
-  @ViewChild('swiperComponent') swiperComponent?: SwiperComponent;
+  @ViewChild('swiperContainer')
+  swiperRef: ElementRef | undefined;
 
   availableStores: Store[] = [];
 
@@ -56,15 +57,16 @@ export class HomepageComponent implements OnInit, AfterViewInit {
   beardServices: StoreService[] = beardServices;
   beautyServices: StoreService[] = beautyServices;
 
-  ngOnInit(): void {
-    this.availableStores = STORES;
+  constructor() {
+    afterNextRender(() => {
+      if (this.swiperRef) {
+        this.swiperRef.nativeElement.initialize();
+      }
+    });
   }
 
-  ngAfterViewInit(): void {
-    if (this.swiperComponent) {
-      // this.swiperComponent.activeIndex = 2;
-      // this.swiperComponent.autoplay.start();
-    }
+  ngOnInit(): void {
+    this.availableStores = STORES;
   }
 
   openReservations(): void {

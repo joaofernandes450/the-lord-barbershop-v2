@@ -1,5 +1,11 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
-import SwiperComponent from 'swiper/core';
+import {
+  afterNextRender,
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
 import { StoreService } from '../../models/store-service';
 
 @Component({
@@ -11,5 +17,16 @@ import { StoreService } from '../../models/store-service';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ServicesSwiperComponent {
+  @ViewChild('swiperContainer')
+  swiperRef: ElementRef | undefined;
+
   @Input() services: StoreService[] = [];
+
+  constructor() {
+    afterNextRender(() => {
+      if (this.swiperRef) {
+        this.swiperRef.nativeElement.initialize();
+      }
+    });
+  }
 }
