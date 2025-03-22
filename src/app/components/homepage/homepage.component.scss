@@ -53,21 +53,7 @@
       height: 15vh;
 
       .reservations-button {
-        transform: translateY(0px);
-        transition: 0.3s ease;
-        -webkit-transition: 0.3s ease;
-        -moz-transition: 0.3s ease;
-        transition: 0.3s ease;
         width: 100%;
-      }
-
-      .reservations-button:hover {
-        transform: translateY(-20px);
-        cursor: pointer;
-        transition: 0.3s ease;
-        -webkit-transition: 0.3s ease;
-        -moz-transition: 0.3s ease;
-        transition: 0.3s ease;
       }
     }
   }
@@ -115,21 +101,7 @@
     width: 100%;
 
     .store-image {
-      transform: translateY(0px);
-      transition: 0.3s ease;
-      -webkit-transition: 0.3s ease;
-      -moz-transition: 0.3s ease;
-      transition: 0.3s ease;
       width: 100%;
-    }
-
-    .store-image:hover {
-      transform: translateY(-20px);
-      cursor: pointer;
-      transition: 0.3s ease;
-      -webkit-transition: 0.3s ease;
-      -moz-transition: 0.3s ease;
-      transition: 0.3s ease;
     }
   }
 }
@@ -168,6 +140,49 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .reservation-button-container {
+    .child-container {
+      .reservations-button {
+        transform: translateY(0px);
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        transition: 0.3s ease;
+        width: 100%;
+      }
+
+      .reservations-button:hover {
+        transform: translateY(-20px);
+        cursor: pointer;
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        transition: 0.3s ease;
+      }
+    }
+  }
+
+  .the-lord-stores {
+    a {
+      .store-image {
+        transform: translateY(0px);
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        transition: 0.3s ease;
+        width: 100%;
+      }
+
+      .store-image:hover {
+        transform: translateY(-20px);
+        cursor: pointer;
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+        -moz-transition: 0.3s ease;
+        transition: 0.3s ease;
+      }
+    }
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
