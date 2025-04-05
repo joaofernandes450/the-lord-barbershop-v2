@@ -1,5 +1,11 @@
 @if (services && services.length > 0) {
-<swiper-container #swiperContainer class="mySwiper" effect="cards" init="false">
+<swiper-container
+  #swiperContainer
+  class="mySwiper"
+  effect="cards"
+  grab-cursor="true"
+  init="false"
+>
   @for (service of services; track $index) {
   <swiper-slide>
     <img [src]="service.image" />
