@@ -6,6 +6,7 @@
   img {
     flex: 1 1 calc(33.333% - 20px);
     width: 100%;
+    aspect-ratio: 2 / 1;
     height: 100%;
     object-fit: cover;
     border-radius: 14px;
@@ -29,13 +30,16 @@
 @media only screen and (max-width: 768px) {
   .grid {
     flex-direction: column;
+    img {
+      aspect-ratio: 1;
+    }
   }
 }
 
 @media only screen and (max-width: 1200px) {
   .grid {
     img {
-      flex: 1 1 calc(50% - 20px) !important;
+      flex: 1 1 calc(50% - 20px);
     }
   }
 }
