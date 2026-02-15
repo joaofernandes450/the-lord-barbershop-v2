@@ -62,7 +62,9 @@ body {
   letter-spacing: 0.2px;
 }
 .section {
-  padding: 48px 22px;
+  position: relative;
+  padding-top: 125px;
+  top: -75px;
   max-width: 90%;
   margin: 0 auto;
 
