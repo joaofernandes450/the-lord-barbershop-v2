@@ -8,7 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
 import { map, Observable, shareReplay } from 'rxjs';
-import { ReservationService } from '../../services/reservation.service';
+import { ReservationService } from '../../../services/reservation.service';
 import { ReusableHeaderComponent } from '../reusable-header/reusable-header.component';
 
 @Component({

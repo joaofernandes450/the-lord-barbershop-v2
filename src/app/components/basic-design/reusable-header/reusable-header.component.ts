@@ -1,7 +1,7 @@
 
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { ReservationService } from '../../services/reservation.service';
+import { ReservationService } from '../../../services/reservation.service';
 
 @Component({
   selector: 'app-reusable-header',

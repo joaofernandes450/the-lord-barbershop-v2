@@ -10,12 +10,12 @@ import {
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import { Store, STORES } from '../../models/store';
+import { Store, STORES } from '../../../models/store';
 import {
   beardServices,
   beautyServices,
   StoreService,
-} from '../../models/store-service';
+} from '../../../models/store-service';
 import { ReservationDialogComponent } from '../reservation-dialog/reservation-dialog.component';
 import { ServicesSwiperComponent } from '../services-swiper/services-swiper.component';
 

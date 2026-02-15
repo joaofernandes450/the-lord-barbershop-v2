@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ReservationDialogComponent } from '../components/reservation-dialog/reservation-dialog.component';
+import { ReservationDialogComponent } from '../components/basic-design/reservation-dialog/reservation-dialog.component';
 
 @Injectable({
   providedIn: 'root',

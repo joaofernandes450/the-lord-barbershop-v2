@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from './components/footer/footer.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
+import { FooterComponent } from './components/basic-design/footer/footer.component';
+import { NavigationComponent } from './components/basic-design/navigation/navigation.component';
 
 @Component({
   selector: 'app-root',

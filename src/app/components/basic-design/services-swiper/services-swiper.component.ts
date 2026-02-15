@@ -6,7 +6,7 @@ import {
   Input,
   ViewChild,
 } from '@angular/core';
-import { StoreService } from '../../models/store-service';
+import { StoreService } from '../../../models/store-service';
 
 @Component({
   selector: 'app-services-swiper',
