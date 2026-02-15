@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import {
   afterNextRender,
   Component,
@@ -21,7 +21,7 @@ import { ServicesSwiperComponent } from '../services-swiper/services-swiper.comp
 
 @Component({
   selector: 'app-homepage',
-  imports: [CommonModule, ServicesSwiperComponent, MatButtonModule],
+  imports: [ServicesSwiperComponent, MatButtonModule],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss',
   standalone: true,
