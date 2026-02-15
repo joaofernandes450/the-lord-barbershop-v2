@@ -15,7 +15,7 @@
         <mat-icon>{{ showMobileContent ? "close" : "menu" }}</mat-icon>
       </button>
     } @else {
-      <a href="#bookings">Marcações</a>
+      <a (click)="openReservationsDialog()">Marcações</a>
       <a href="#gallery">Galeria</a>
       <a href="#stores">Lojas</a>
       <a href="#contact">Contato</a>
@@ -30,7 +30,7 @@
     animate.leave="fade-out"
   >
     <div class="content">
-      <a href="#bookings" (click)="showMobileContent = false; (true)"
+      <a (click)="showMobileContent = false; openReservationsDialog()"
         >Marcações</a
       >
       <a href="#gallery" (click)="showMobileContent = false; (true)">Galeria</a>

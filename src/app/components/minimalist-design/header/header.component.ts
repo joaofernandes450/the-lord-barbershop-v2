@@ -4,6 +4,7 @@ import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { map, Observable, shareReplay } from 'rxjs';
+import { ReservationService } from '../../../services/reservation.service';
 
 @Component({
   selector: 'app-header',
@@ -13,6 +14,7 @@ import { map, Observable, shareReplay } from 'rxjs';
 })
 export class HeaderComponent {
   private readonly breakpointObserver = inject(BreakpointObserver);
+  private readonly reservationService = inject(ReservationService);
 
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
@@ -22,4 +24,8 @@ export class HeaderComponent {
     );
 
   showMobileContent = false;
+
+  openReservationsDialog(): void {
+    this.reservationService.openMinimalistReservations();
+  }
 }
