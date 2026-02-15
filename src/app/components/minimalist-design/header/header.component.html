@@ -6,9 +6,36 @@
   </div>
 
   <nav class="nav">
-    <a href="#bookings">Marcações</a>
-    <a href="#gallery">Galeria</a>
-    <a href="#stores">Lojas</a>
-    <a href="#contact">Contato</a>
+    @if (isHandset$ | async) {
+      <button
+        type="button"
+        mat-icon-button
+        (click)="showMobileContent = !showMobileContent"
+      >
+        <mat-icon>{{ showMobileContent ? "close" : "menu" }}</mat-icon>
+      </button>
+    } @else {
+      <a href="#bookings">Marcações</a>
+      <a href="#gallery">Galeria</a>
+      <a href="#stores">Lojas</a>
+      <a href="#contact">Contato</a>
+    }
   </nav>
 </header>
+
+@if (showMobileContent) {
+  <div
+    class="mobile-toolbar-content"
+    animate.enter="fade-in"
+    animate.leave="fade-out"
+  >
+    <div class="content">
+      <a href="#bookings" (click)="showMobileContent = false; (true)"
+        >Marcações</a
+      >
+      <a href="#gallery" (click)="showMobileContent = false; (true)">Galeria</a>
+      <a href="#stores" (click)="showMobileContent = false; (true)">Lojas</a>
+      <a href="#contact" (click)="showMobileContent = false; (true)">Contato</a>
+    </div>
+  </div>
+}
