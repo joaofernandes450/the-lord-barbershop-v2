@@ -1,30 +1,16 @@
 <h2>Contato</h2>
 
 <div class="contact">
-  <!-- <div class="info">
-    <p class="email"><a href="mailto:geral@thelord.pt">geral@thelord.pt</a></p>
-
-    <div class="social">
-      <a href="https://facebook.com" target="_blank" rel="noreferrer"
-        >Facebook</a
-      >
-      <a href="https://instagram.com" target="_blank" rel="noreferrer"
-        >Instagram</a
-      >
-    </div>
-  </div> -->
-
   <form class="form" (submit)="$event.preventDefault(); sent = true">
     <input placeholder="Nome" required />
     <input placeholder="Email" type="email" required />
     <input placeholder="Telefone" required />
     <textarea placeholder="Mensagem" rows="5" required></textarea>
-    @if (sent) {
+    @if (true) {
       <p class="ok">Obrigado por enviar!</p>
     }
     <div class="form-footer">
       <div class="contacts">
-        <a href="mailto:geral@thelord.pt"> geral@thelord.pt </a>
         <div class="socials">
           <a href="https://www.instagram.com/thelord.pt/">
             <img src="assets/socials/insta.png" />
