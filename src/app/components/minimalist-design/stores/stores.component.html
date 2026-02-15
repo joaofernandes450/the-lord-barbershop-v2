@@ -3,13 +3,17 @@
 <div class="cards">
   @for (s of stores; track $index) {
     <article class="card">
-      <div class="photo" [style.backgroundImage]="'url(' + s.image + ')'"></div>
+      <div class="photo">
+        <a [href]="s.googleSearch">
+          <img [src]="s.image" />
+        </a>
+      </div>
       <div class="content">
         <h3>{{ s.name }}</h3>
         <a class="place" [href]="s.mapsUrl" target="_blank" rel="noreferrer">{{
           s.cityLabel
         }}</a>
-        <p>{{ s.description }}</p>
+        <p class="description">{{ s.description }}</p>
       </div>
     </article>
   }
