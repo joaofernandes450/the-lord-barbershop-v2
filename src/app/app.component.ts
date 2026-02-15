@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { FooterComponent } from './components/basic-design/footer/footer.component';
-import { NavigationComponent } from './components/basic-design/navigation/navigation.component';
+import { HomepageComponent } from './components/minimalist-design/homepage/homepage.component';
 
 @Component({
   selector: 'app-root',
-  imports: [NavigationComponent, FooterComponent],
+  imports: [HomepageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   standalone: true,

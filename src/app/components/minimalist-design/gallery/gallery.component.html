@@ -1,0 +1,7 @@
+<h2>Galeria</h2>
+
+<div class="grid">
+  @for (src of images; track $index) {
+    <img [src]="src" alt="Projeto The Lord" loading="lazy" />
+  }
+</div>
