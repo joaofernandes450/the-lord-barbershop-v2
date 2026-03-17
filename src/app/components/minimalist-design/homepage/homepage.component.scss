@@ -15,3 +15,14 @@
     object-position: 50% 50%;
   }
 }
+
+.filler-image {
+    object-fit: contain;
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .filler-image-section {
+    display: none;
+  }
+}
