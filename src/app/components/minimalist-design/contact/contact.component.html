@@ -1,10 +1,22 @@
 <h2>contato.</h2>
 
 <div class="contact">
-  <form class="form" (submit)="$event.preventDefault(); sent = true">
-    <input placeholder="Nome" required />
-    <input placeholder="Email" type="email" required />
-    <textarea placeholder="Mensagem" rows="5" required></textarea>
+  <form
+    id="contact-form"
+    action="mailto:geral@thelord.pt"
+    method="post"
+    enctype="text/plain"
+    class="form"
+    (submit)="this.resetForm()"
+  >
+    <input type="text" name="nome" placeholder="Nome" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea
+      name="mensagem"
+      placeholder="Mensagem"
+      rows="5"
+      required
+    ></textarea>
     @if (sent) {
       <p class="ok">Obrigado por enviar!</p>
     }

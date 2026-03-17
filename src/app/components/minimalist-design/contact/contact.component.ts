@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   sent = false;
+
+  resetForm(): void {
+    this.sent = true;
+    (document.getElementById('contact-form') as HTMLFormElement).reset();
+  }
 }
