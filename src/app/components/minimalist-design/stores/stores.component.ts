@@ -22,7 +22,7 @@ export class StoresComponent {
       cityLabel: 'Ribeirão',
       description:
         'Experiência exclusiva, detalhe premium e cuidados masculinos personalizados.',
-      image: 'assets/slider/6.png',
+      image: 'assets/stores/prive.jpg',
       mapsUrl:
         'https://www.google.com/maps/search/?api=1&query=The%20Lord%20Prive%20Ribeirao',
       googleSearch:
