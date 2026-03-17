@@ -26,6 +26,18 @@ export class HeaderComponent {
   showMobileContent = false;
 
   openReservationsDialog(): void {
-    this.reservationService.openMinimalistReservations();
+    this.scrollToItem('bookings');
+    setTimeout(() => {
+      this.reservationService.openMinimalistReservations();
+    }, 500);
+  }
+
+  scrollToItem(elementId: string): void {
+    const element = document.getElementById(elementId);
+    element?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'start',
+    });
   }
 }

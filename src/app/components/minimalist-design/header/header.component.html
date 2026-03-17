@@ -16,9 +16,9 @@
       </button>
     } @else {
       <a (click)="openReservationsDialog()">marcações.</a>
-      <a href="#gallery">galeria.</a>
-      <a href="#stores">lojas.</a>
-      <a href="#contact">contato.</a>
+      <a (click)="scrollToItem('gallery')">galeria.</a>
+      <a (click)="scrollToItem('stores')">lojas.</a>
+      <a (click)="scrollToItem('contact')">contato.</a>
     }
   </nav>
 </header>
@@ -33,9 +33,13 @@
       <a (click)="showMobileContent = false; openReservationsDialog()"
         >marcações.</a
       >
-      <a href="#gallery" (click)="showMobileContent = false; (true)">galeria.</a>
-      <a href="#stores" (click)="showMobileContent = false; (true)">lojas.</a>
-      <a href="#contact" (click)="showMobileContent = false; (true)">contato.</a>
+      <a (click)="showMobileContent = false; scrollToItem('gallery')"
+        >galeria.</a
+      >
+      <a (click)="showMobileContent = false; scrollToItem('stores')">lojas.</a>
+      <a (click)="showMobileContent = false; scrollToItem('contact')"
+        >contato.</a
+      >
     </div>
   </div>
 }
