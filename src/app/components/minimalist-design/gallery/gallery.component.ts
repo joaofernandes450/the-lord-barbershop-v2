@@ -8,11 +8,11 @@ import { Component } from '@angular/core';
 })
 export class GalleryComponent {
   images = [
-    'assets/gallery/1.png',
-    'assets/gallery/2.png',
-    'assets/gallery/3.png',
-    'assets/gallery/4.png',
-    'assets/gallery/5.png',
-    'assets/gallery/6.png',
+    'assets/gallery/1.jpg',
+    'assets/gallery/2.jpg',
+    'assets/gallery/3.jpg',
+    'assets/gallery/4.jpg',
+    'assets/gallery/5.jpg',
+    'assets/gallery/6.jpg',
   ];
 }

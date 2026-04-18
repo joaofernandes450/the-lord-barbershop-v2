@@ -3,7 +3,7 @@
 <div class="grid">
   @for (src of images; track $index) {
     <div class="image-container">
-      <img [src]="src" />
+      <img loading="lazy" [src]="src" />
     </div>
   }
 </div>
