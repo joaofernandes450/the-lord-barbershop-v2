@@ -2,6 +2,8 @@
 
 <div class="grid">
   @for (src of images; track $index) {
-    <img [src]="src"/>
+    <div class="image-container">
+      <img [src]="src" />
+    </div>
   }
 </div>
